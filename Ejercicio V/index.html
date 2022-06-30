@@ -9,14 +9,48 @@
 <body>
     <script>
         //EJERCICIO 5 Escribe un programa que pida una frase y escriba las vocales que aparecen en ella.//
-    var frase=prompt("Por favor, aquí escriba su frase")
-    var nText=text.length;
-    var i;
-    for (i=0; i<nText;i++){
-    if(text.substr(i,1)==="a",text.substr(i,1)==="e",text.substr(i,1)==="i",text.substr(i,1)==="o",text.substr(i,1)==="u" ){
-    document.write(text.substr(i,1)==="a");
+        const frase = prompt("Escriba una frase");
+var conteoA = 0;
+var conteoE = 0;
+var conteoI = 0;
+var conteoO = 0;
+var conteoU = 0;
+var vocales = '';
+for (var ciclo = 0; ciclo < frase.length; ciclo++) {
+    if (frase[ciclo].toLowerCase() == 'a') {
+        conteoA++
     }
+    if (frase[ciclo].toLowerCase() == 'e') {
+        conteoE++
     }
+    if (frase[ciclo].toLowerCase() == 'i') {
+        conteoI++
+    }
+    if (frase[ciclo].toLowerCase() == 'o') {
+        conteoO++
+    }
+    if (frase[ciclo].toLowerCase() == 'u') {
+        conteoU++
+    }
+}
+
+if (conteoA !==0){
+    vocales+=' a '
+}
+if (conteoE !==0){
+    vocales+=' e '
+}
+if (conteoI !==0){
+    vocales+=' i '
+}
+if (conteoO !==0){
+    vocales+=' o '
+}
+if (conteoU !==0){
+    vocales+=' u '
+}
+
+document.write(`La frase encontrada es '${frase}' y las vocales encontradas son las siguientes: '${vocales}'`);
     </script>
 </body>
 </html>

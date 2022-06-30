@@ -9,14 +9,14 @@
 <body>
     <script>
         //EJERCICIO 4 Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a.//
-    var frase=prompt("Por favor, aquí escriba su frase")
-    var nText=text.length;
-    var i;
-    for (i=0; i<nText;i++){
-        if(text.substr(i,1)==="a"){
-            document.write(text.substr(i,1)==="a");
-        }
-        }
+        var frase = prompt("Escriba aquí su frase");
+        var conteo = 0;
+        for (var ciclo = 0; ciclo < frase.length; ciclo++) {
+        if(frase[ciclo].toLowerCase() == 'a'){
+        conteo++
+    }
+}
+document.write(`La frase es '${frase}' y la letra 'a' se repite ${conteo} veces`);
     </script>
 </body>
 </html>
